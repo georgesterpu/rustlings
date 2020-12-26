@@ -1,14 +1,20 @@
 // functions3.rs
 // Make me compile! Execute `rustlings hint functions3` for hints :)
 
-// I AM NOT DONE
 
 fn main() {
-    call_me();
+    let x: i32 = 5;
+    let maybe: bool = true;
+    call_me(x, maybe);
 }
 
-fn call_me(num: i32) {
-    for i in 0..num {
-        println!("Ring! Call number {}", i + 1);
+fn call_me(num: i32, maybe: bool) {
+    if maybe {
+        for i in 0..num {
+            println!("Ring! Call number {}", i + 1);
+        }
+    } else {
+        println!("Maybe not");
     }
+
 }
